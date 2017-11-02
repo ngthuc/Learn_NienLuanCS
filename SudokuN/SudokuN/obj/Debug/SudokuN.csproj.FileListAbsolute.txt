@@ -21,3 +21,6 @@ D:\Temp\Sudoku\SudokuN\SudokuN\obj\Debug\SudokuN.View.N11a.resources
 D:\Temp\Sudoku\SudokuN\SudokuN\obj\Debug\SudokuN.View.N16.resources
 D:\Temp\Sudoku\SudokuN\SudokuN\obj\Debug\SudokuN.View.Welcome.resources
 D:\Temp\Sudoku\SudokuN\SudokuN\obj\Debug\SudokuN.View.About.resources
+D:\STUDY\Learn_NienLuanCS\SudokuN\SudokuN\bin\Debug\SudokuN.exe.config
+D:\STUDY\Learn_NienLuanCS\SudokuN\SudokuN\obj\Debug\SudokuN.exe
+D:\STUDY\Learn_NienLuanCS\SudokuN\SudokuN\obj\Debug\SudokuN.pdb
