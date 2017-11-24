@@ -40,15 +40,32 @@ namespace SudokuN.View
         private void btnGo_Click(object sender, EventArgs e)
         {
             this.N7_Load(sender, e);
-            // Giải ma trận rỗng một cách ngẫu nhiên
-            n7.solveSudoku(nb, 0, 0, 7);
-            for (int i = 0; i < 7; i++)
+            Class7 n7 = new Class7();
+            //Nạp ma trận lên và hiển thị hình ảnh
+            TextBox[,] lbl = n7.clickMove81toArray(
+             lbl11, lbl12, lbl13, lbl14, lbl15, lbl16, lbl17,
+             lbl21, lbl22, lbl23, lbl24, lbl25, lbl26, lbl27,
+             lbl31, lbl32, lbl33, lbl34, lbl35, lbl36, lbl37,
+             lbl41, lbl42, lbl43, lbl44, lbl45, lbl46, lbl47,
+             lbl51, lbl52, lbl53, lbl54, lbl55, lbl56, lbl57,
+             lbl61, lbl62, lbl63, lbl64, lbl65, lbl66, lbl67,
+             lbl71, lbl72, lbl73, lbl74, lbl75, lbl76, lbl77,
+             nb);
+            if (n7.checkFeasible(nb, 7) == false) MessageBox.Show("Can't play this! You must clear and replay", "Check Maxtrix", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
             {
-                for (int j = 0; j < 7; j++)
+                // Giải ma trận rỗng một cách ngẫu nhiên
+                n7.solveSudoku(nb, 0, 0, 7);
+                for (int i = 0; i < 7; i++)
                 {
-                    lbl[i, j].Text = nb[i, j].Value.ToString();
+                    for (int j = 0; j < 7; j++)
+                    {
+                        lbl[i, j].Text = nb[i, j].Value.ToString();
+                    }
                 }
             }
+
+           
         }
 
         private void btnBack_Click(object sender, EventArgs e)

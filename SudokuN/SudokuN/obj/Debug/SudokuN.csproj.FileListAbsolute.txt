@@ -31,8 +31,6 @@ D:\STUDY\Learn_NienLuanCS\SudokuN\SudokuN\obj\Debug\SudokuN.Properties.Resources
 D:\STUDY\Learn_NienLuanCS\SudokuN\SudokuN\obj\Debug\SudokuN.View.About.resources
 D:\STUDY\Learn_NienLuanCS\SudokuN\SudokuN\obj\Debug\SudokuN.View.Menu.resources
 D:\STUDY\Learn_NienLuanCS\SudokuN\SudokuN\obj\Debug\SudokuN.View.N10.resources
-D:\STUDY\Learn_NienLuanCS\SudokuN\SudokuN\obj\Debug\SudokuN.View.N11.resources
-D:\STUDY\Learn_NienLuanCS\SudokuN\SudokuN\obj\Debug\SudokuN.View.N11a.resources
 D:\STUDY\Learn_NienLuanCS\SudokuN\SudokuN\obj\Debug\SudokuN.View.N12.resources
 D:\STUDY\Learn_NienLuanCS\SudokuN\SudokuN\obj\Debug\SudokuN.View.N16.resources
 D:\STUDY\Learn_NienLuanCS\SudokuN\SudokuN\obj\Debug\SudokuN.View.N3.resources

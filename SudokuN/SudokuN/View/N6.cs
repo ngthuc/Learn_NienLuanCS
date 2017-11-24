@@ -39,16 +39,30 @@ namespace SudokuN.View
         private void btnGo_Click(object sender, EventArgs e)
         {
             this.N6_Load(sender, e);
-            this.Check_Click(sender, e);
-            // Giải ma trận rỗng một cách ngẫu nhiên
-            n6.solveSudoku(nb, 0, 0, 6);
-            for (int i = 0; i < 6; i++)
+            Class6 n6 = new Class6();
+            //Nạp ma trận lên và hiển thị hình ảnh
+            TextBox[,] lbl = n6.clickMove81toArray(
+             lbl11, lbl12, lbl13, lbl14, lbl15, lbl16,
+             lbl21, lbl22, lbl23, lbl24, lbl25, lbl26,
+             lbl31, lbl32, lbl33, lbl34, lbl35, lbl36,
+             lbl41, lbl42, lbl43, lbl44, lbl45, lbl46,
+             lbl51, lbl52, lbl53, lbl54, lbl55, lbl56,
+             lbl61, lbl62, lbl63, lbl64, lbl65, lbl66,
+             nb);
+            if (n6.checkFeasible(nb, 6) == false) MessageBox.Show("Can't play this! You must clear and replay", "Check Maxtrix", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
             {
-                for (int j = 0; j < 6; j++)
+                // Giải ma trận rỗng một cách ngẫu nhiên
+                n6.solveSudoku(nb, 0, 0, 6);
+                for (int i = 0; i < 6; i++)
                 {
-                    lbl[i, j].Text = nb[i, j].Value.ToString();
+                    for (int j = 0; j < 6; j++)
+                    {
+                        lbl[i, j].Text = nb[i, j].Value.ToString();
+                    }
                 }
             }
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)

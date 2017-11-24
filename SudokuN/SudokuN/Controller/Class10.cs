@@ -79,8 +79,9 @@ namespace SudokuN.Controller
                         }
                         catch
                         {
-                            MessageBox.Show("Error Row " + (i + 1) + " and Colum " + (j + 1), "Check Maxtrix", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return array;
+                            if (num[i, j].Value != -1) MessageBox.Show("Error Row " + (i + 1) + " and Colum " + (j + 1), "Check Maxtrix", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            num[i, j].Value = -1;
+                           
                         }
                     }
                 }

@@ -41,16 +41,33 @@ namespace SudokuN.View
         private void btnGo_Click(object sender, EventArgs e)
         {
             this.N8_Load(sender, e);
-            this.Check_Click(sender, e);
-            // Giải ma trận rỗng một cách ngẫu nhiên
-            n8.solveSudoku(nb, 0, 0, 8);
-            for (int i = 0; i < 8; i++)
+            Class8 n8 = new Class8();
+            //Nạp ma trận lên và hiển thị hình ảnh
+            TextBox[,] lbl = lbl = n8.clickMove81toArray(
+             lbl11, lbl12, lbl13, lbl14, lbl15, lbl16, lbl17, lbl18,
+             lbl21, lbl22, lbl23, lbl24, lbl25, lbl26, lbl27, lbl28,
+             lbl31, lbl32, lbl33, lbl34, lbl35, lbl36, lbl37, lbl38,
+             lbl41, lbl42, lbl43, lbl44, lbl45, lbl46, lbl47, lbl48,
+             lbl51, lbl52, lbl53, lbl54, lbl55, lbl56, lbl57, lbl58,
+             lbl61, lbl62, lbl63, lbl64, lbl65, lbl66, lbl67, lbl68,
+             lbl71, lbl72, lbl73, lbl74, lbl75, lbl76, lbl77, lbl78,
+             lbl81, lbl82, lbl83, lbl84, lbl85, lbl86, lbl87, lbl88,
+              nb);
+            if (n8.checkFeasible(nb, 8) == false) MessageBox.Show("Can't play this! You must clear and replay", "Check Maxtrix", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
             {
-                for (int j = 0; j < 8; j++)
+                // Giải ma trận rỗng một cách ngẫu nhiên
+                n8.solveSudoku(nb, 0, 0, 8);
+                for (int i = 0; i < 8; i++)
                 {
-                    lbl[i, j].Text = nb[i, j].Value.ToString();
+                    for (int j = 0; j < 8; j++)
+                    {
+                        lbl[i, j].Text = nb[i, j].Value.ToString();
+                    }
                 }
             }
+
+           
         }
 
         private void btnBack_Click(object sender, EventArgs e)

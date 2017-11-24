@@ -36,16 +36,27 @@ namespace SudokuN.View
         private void btnGo_Click(object sender, EventArgs e)
         {   
             this.N3_Load(sender, e);
-            Check_Click(sender, e);
-            // Giải ma trận rỗng một cách ngẫu nhiên
-            n3.solveSudoku(nb, 0, 0, 3);
-            for (int i = 0; i < 3; i++)
+            Class3 n3 = new Class3();
+            //Nạp ma trận lên và hiển thị hình ảnh
+            TextBox[,] lbl = n3.clickMove81toArray(
+             lbl11, lbl12, lbl13,
+             lbl21, lbl22, lbl23,
+             lbl31, lbl32, lbl33,
+             nb);
+            if (n3.checkFeasible(nb, 3) == false) MessageBox.Show("Can't play this! You must clear and replay", "Check Maxtrix", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
             {
-                for (int j = 0; j < 3; j++)
+                // Giải ma trận rỗng một cách ngẫu nhiên
+                n3.solveSudoku(nb, 0, 0, 3);
+                for (int i = 0; i < 3; i++)
                 {
-                    lbl[i, j].Text = nb[i, j].Value.ToString();
+                    for (int j = 0; j < 3; j++)
+                    {
+                        lbl[i, j].Text = nb[i, j].Value.ToString();
+                    }
                 }
             }
+           
         }
 
         private void btnBack_Click(object sender, EventArgs e)

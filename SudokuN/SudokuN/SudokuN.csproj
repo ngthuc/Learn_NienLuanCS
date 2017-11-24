@@ -47,8 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Class10.cs" />
-    <Compile Include="Controller\Class11.cs" />
-    <Compile Include="Controller\Class11a.cs" />
     <Compile Include="Controller\Class12.cs" />
     <Compile Include="Controller\Class16.cs" />
     <Compile Include="Controller\Class3.cs" />
@@ -79,18 +77,6 @@
     </Compile>
     <Compile Include="View\N10.Designer.cs">
       <DependentUpon>N10.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\N11.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\N11.Designer.cs">
-      <DependentUpon>N11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\N11a.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\N11a.Designer.cs">
-      <DependentUpon>N11a.cs</DependentUpon>
     </Compile>
     <Compile Include="View\N12.cs">
       <SubType>Form</SubType>
@@ -170,12 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\N10.resx">
       <DependentUpon>N10.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\N11.resx">
-      <DependentUpon>N11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\N11a.resx">
-      <DependentUpon>N11a.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\N12.resx">
       <DependentUpon>N12.cs</DependentUpon>

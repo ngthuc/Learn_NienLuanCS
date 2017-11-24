@@ -114,13 +114,7 @@ namespace SudokuN.View
 
         }
 
-        private void btn11_Click(object sender, EventArgs e)
-        {
-            N11a frm11 = new N11a();
-            this.Hide();
-            frm11.ShowDialog();
-            this.Show();
-        }
+        
 
         private void btn12_Click(object sender, EventArgs e)
         {
